@@ -20,28 +20,27 @@ public class Test1 {
         for (Device urzadzenie: urzadzenia) {
             System.out.println("---------------------------------------------------------------------------");
             System.out.println(urzadzenie.toString());
-            try {
-                Connectable urz2 = (Connectable) urzadzenie;
+
+            if (urzadzenie instanceof Connectable urz2) {
                 urz2.connect(true);
-            } catch (ClassCastException e) {
+            } else {
                 System.out.println("Urządzenie " + urzadzenie.name + " nie może zostać podłączone");
             }
-            try {
-                TurnOnOffAble urz = (TurnOnOffAble) urzadzenie;
+
+            if (urzadzenie instanceof TurnOnOffAble urz) {
                 urz.turnOnOff("On");
-            } catch (ClassCastException e) {
+            } else {
                 System.out.println("Urządzenie " + urzadzenie.name + " nie może zostać włączony/a ponieważ nie posiada przycisku ON/OFF");
             }
-            try {
-                TurnOnOffAble urz = (TurnOnOffAble) urzadzenie;
+
+            if (urzadzenie instanceof TurnOnOffAble urz) {
                 urz.turnOnOff("Off");
-            } catch (ClassCastException e) {
+            } else {
                 System.out.println("Urządzenie " + urzadzenie.name + " nie może zostać włączony/a ponieważ nie posiada przycisku ON/OFF");
             }
-            try {
-                Connectable urz2 = (Connectable) urzadzenie;
+            if (urzadzenie instanceof Connectable urz2) {
                 urz2.connect(false);
-            } catch (ClassCastException e) {
+            } else {
                 System.out.println("Urządzenie " + urzadzenie.name + " nie może zostać podłączone");
             }
         }

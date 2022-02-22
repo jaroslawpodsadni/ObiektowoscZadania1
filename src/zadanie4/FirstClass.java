@@ -7,9 +7,23 @@ public class FirstClass {
         return a+b;
     }
 
-    public int dodaj(int a, int b) {
+    /*public int dodaj(int a, int b) {
         System.out.println("Integer");
         return a+b;
+    }
+
+    public int dodaj(int a, int b, int c) {
+        System.out.println("Integer");
+        return a+b+c;
+    }*/
+
+    public int dodaj(int... tab) {
+        System.out.println("Integer");
+        int suma = 0;
+        for (int i=0; i<tab.length; i++) {
+            suma += tab[i];
+        }
+        return suma;
     }
 
     public long dodaj(long a, long b) {

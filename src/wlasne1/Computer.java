@@ -6,6 +6,7 @@ public class Computer extends Device implements TurnOnOffAble, Connectable {
         super(name, place, price);
     }
 
+
     public double getPrice() {
         return price;
     }
