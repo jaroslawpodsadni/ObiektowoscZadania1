@@ -11,8 +11,8 @@ public class Barman {
         return drink;
     }
 
-    public static Drink createDrink(String name, Ingredient ingredient1, Ingredient ingredient2, Ingredient ingredient3) {
-        Drink drink = new Drink(name, ingredient1, ingredient2, ingredient3);
+    public static Drink createDrink(String name, Ingredient... ingredient) {
+        Drink drink = new Drink(name, ingredient);
         return drink;
     }
 

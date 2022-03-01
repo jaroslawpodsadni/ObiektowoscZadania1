@@ -19,7 +19,14 @@ public class Zadanie {
                                 new Ingredient("woda", 34),
                                 new Ingredient("wodka", 50),
                                 new Ingredient("sok", 60)
-                        )
+                        ));
+                System.out.println(Barman.createDrink(
+                        "Drink8",
+                        new Ingredient("woda", 34),
+                        new Ingredient("wodka", 50),
+                        new Ingredient("pomarancza", 40),
+                        new Ingredient("sok", 60)
+                )
 
         );
     }
